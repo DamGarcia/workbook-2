@@ -43,7 +43,6 @@ public class Main {
 
 
 
-
         // display the results
         System.out.println();
         System.out.println("First Name: " + firstName);
