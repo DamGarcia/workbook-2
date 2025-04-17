@@ -3,7 +3,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 
 public class Main {
@@ -17,7 +16,7 @@ public class Main {
         String name = scanner.nextLine().trim();
 
         // split first and last name
-        String[] fullName = name.split(Pattern.quote(" "));
+        String[] fullName = name.split(" ");
         String firstName = fullName[0];
         String lastName = fullName[fullName.length - 1];
 
