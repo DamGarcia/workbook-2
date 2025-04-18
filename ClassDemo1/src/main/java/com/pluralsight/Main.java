@@ -52,8 +52,10 @@ public class Main {
 
     //    savePerson(fullname, age, profession);
 
-        System.out.println(thePerson.toString());
-        System.out.println(theOtherPerson.toString());
+     // --- the println can compute an overloaded output by calling toString()
+     // behind the scenes without physically typing toString()
+        System.out.println(thePerson);
+        System.out.println(theOtherPerson);
 
     }
 
