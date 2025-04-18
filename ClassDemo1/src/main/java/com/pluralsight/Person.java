@@ -8,7 +8,6 @@ public class Person {
 
     // --- the constructor method is a blueprint for creating the object Person
     // --- describes how the Person would behave
-    // ---
     public Person(String fullname, int age, String profession) {
         // special method called constructor
         this.fullname = fullname;
@@ -40,4 +39,13 @@ public class Person {
         this.profession = profession;
 
         }
-    }
+
+        // --- alters data and formats into a String
+    @Override
+    public String toString() {
+        return String.format("Person %s is a %s and is %d years old. \n"
+                , this.getFullname()
+                , this.getProfession()
+                , this.getAge());
+        }
+}

@@ -24,8 +24,8 @@ public class Main {
         System.out.print("What is the person's profession: ");
         profession = scanner.nextLine();
 
-        // --- creates a new instance of the class Person
-        // --- calls the constructor method Person | executing the constructor method
+        // --- create new instance of class Person
+        // --- call constructor method Person | executing the constructor method
         Person thePerson = new Person(fullname, age, profession);
 
 
@@ -45,26 +45,16 @@ public class Main {
         Person theOtherPerson = new Person(fullname, age,profession);
 
 
-        // --- display full name from both people
-        System.out.println(thePerson.getFullname());
-        System.out.println(theOtherPerson.getFullname());
+//        // --- display full name from both people
+//        System.out.println(thePerson.getFullname());
+//        System.out.println(theOtherPerson.getFullname());
 
-        // --- calling the methods created within this class
-        displayPerson(thePerson);
-        displayPerson(theOtherPerson);
 
     //    savePerson(fullname, age, profession);
 
+        System.out.println(thePerson.toString());
+        System.out.println(theOtherPerson.toString());
 
-
-    }
-
-    public static void displayPerson(Person person) {
-        System.out.printf("Person %s is a %s and is %d years old. \n"
-                , person.getFullname()
-                , person.getProfession()
-                , person.getAge()
-        );
     }
 
     public static void savePerson(String fullname, int age, String profession) {
