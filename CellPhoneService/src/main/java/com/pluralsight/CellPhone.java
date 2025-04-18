@@ -20,6 +20,13 @@ public class CellPhone {
         this.owner = "";
     }
 
+    public void dial(String phoneNumber){
+        System.out.printf("%s's Cell phone is dialing the number %s from the number %s \n"
+        , this.owner
+        , phoneNumber
+        , this.getPhoneNumber());
+    }
+
     // ---
     public double getSerialNumber(){
         return this.serialNumber;

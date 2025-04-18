@@ -43,7 +43,8 @@ public class CellPhoneApplication {
         System.out.println(phone.getOwner());
 
 
-
+        phone.dial("222-2cute-4u");
+        phone.dial("888-2cake-fake");
 
     }
 }
