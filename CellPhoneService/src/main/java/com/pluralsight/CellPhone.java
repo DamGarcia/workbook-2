@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+
+// --- creating a class named CellPhone
 public class CellPhone {
 
     private int serialNumber;
@@ -8,6 +10,8 @@ public class CellPhone {
     private String phoneNumber;
     private String owner;
 
+    // --- creating paramaterless constructor
+    // --- setting default values
     public CellPhone(){
         this.serialNumber = 0;
         this.model = "";
@@ -16,6 +20,7 @@ public class CellPhone {
         this.owner = "";
     }
 
+    // ---
     public double getSerialNumber(){
         return this.serialNumber;
     }

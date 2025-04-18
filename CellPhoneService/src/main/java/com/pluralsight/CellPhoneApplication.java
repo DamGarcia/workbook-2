@@ -6,9 +6,14 @@ public class CellPhoneApplication {
 
         Scanner scanner = new Scanner(System.in);
 
+        // --- creating new instance of CellPhone
         CellPhone phone = new CellPhone();
 
+
+        // --- prompting User to provide cell phone information
         System.out.println("Serial Number: ");
+        // --- after User input, following code sets
+        // --- User input is set within the variable (phone.set...)
         phone.setSerialNumber(Integer.parseInt(scanner.nextLine()));
 
         System.out.println("Model: ");
@@ -30,7 +35,7 @@ public class CellPhoneApplication {
 
 
 
-
+        // --- retrieves the values provided (phone.get...) and displays
         System.out.println(phone.getSerialNumber());
         System.out.println(phone.getModel());
         System.out.println(phone.getCarrier());
