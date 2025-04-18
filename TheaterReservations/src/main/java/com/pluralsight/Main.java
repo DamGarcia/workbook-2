@@ -2,6 +2,7 @@ package com.pluralsight;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Date;
 import java.util.Scanner;
 
 
@@ -26,23 +27,32 @@ public class Main {
         String date = scanner.nextLine().trim();
 
 
-        // defines input and output formatters for the date
-        DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        // format User date
+        DateTimeFormatter formatter;
+        formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
-        // initialize variable to use outside the try-catch block
-        String outputDate;
+        LocalDate showDate = LocalDate.parse(date, formatter);
 
-        try {
-            // parse the input date
-            LocalDate inputDate = LocalDate.parse(date, inputFormatter);
 
-            // format and print the output date
-            outputDate = inputDate.format(outputFormatter);
-        } catch(DateTimeParseException exception) { // the catch block needs an exception parameter to pass
-            System.out.println("Invalid date format. Please use MM/dd/yyyy");
-            return;
-        }
+//        The below code was an experimental way to perform the date format by taking User input normally (MM/dd/yyyy)
+//        then changes the output to the desired date format (yyyy/MM/dd)
+//        // defines input and output formatters for the date
+//        DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+//        DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+//
+//        // initialize variable to use outside the try-catch block
+//        String outputDate;
+//
+//        try {
+//            // parse the input date
+//            LocalDate inputDate = LocalDate.parse(date, inputFormatter);
+//
+//            // format and print the output date
+//            outputDate = inputDate.format(outputFormatter);
+//        } catch(DateTimeParseException exception) { // the catch block needs an exception parameter to pass
+//            System.out.println("Invalid date format. Please use MM/dd/yyyy");
+//            return;
+//        }
 
 
 
@@ -58,7 +68,8 @@ public class Main {
         System.out.printf("%d %s reserved for %s under %s, %s",
                 numTickets,
                 tickets,
-                outputDate,
+//                outputDate, // the output variable from the experimental code
+                showDate,
                 lastName,
                 firstName
         );
