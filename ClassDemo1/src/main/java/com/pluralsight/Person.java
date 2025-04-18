@@ -6,7 +6,9 @@ public class Person {
     private int age;
     private String profession;
 
-
+    // --- the constructor method is a blueprint for creating the object Person
+    // --- describes how the Person would behave
+    // ---
     public Person(String fullname, int age, String profession) {
         // special method called constructor
         this.fullname = fullname;
